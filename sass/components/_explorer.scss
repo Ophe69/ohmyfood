@@ -1,0 +1,22 @@
+.explorer {
+  background-color: #F6F6F6;
+  margin-top: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 30px;
+  }
+  h3 {
+    font-size: 1.125rem;
+    font-weight: lighter;
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,40 @@
+/* ne doit contenir que des @import et des commentaires */
+
+
+ /* un fichier par @import ;
+un @import par ligne ;
+pas de saut de ligne entre 2 imports provenant du même dossier ;
+un saut de ligne après le dernier import d’un dossier ;
+les extensions fichiers et les underscores initiaux doivent être omis. */
+
+
+/* ou Globbing 
+@import 'abstracts/*';
+@import 'vendors/*';
+@import 'base/*';
+ */
+
+ @import 'utils/functions';
+ @import 'utils/mixins';
+ @import 'utils/variables';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/location';
+@import 'layout/fonctionnement';
+@import 'layout/restaurants';
+
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/loader';
+@import 'components/explorer';
+
+@import 'pages/homepage';
+@import 'pages/restaurant';
+
+

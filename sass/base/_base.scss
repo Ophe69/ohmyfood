@@ -1,0 +1,17 @@
+@import "../utils/mixins";
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F6F6F6;
+  margin: 0;
+}
+
+.logo {
+  font-family: 'Shrikhand', serif;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include component-shadow;
+  
+}
