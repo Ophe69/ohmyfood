@@ -42,7 +42,6 @@ footer i {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .location {
@@ -51,6 +50,7 @@ footer i {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 6px 0px inset; /* , rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
 }
 .location h2 {
   font-size: 1rem;
@@ -59,9 +59,41 @@ footer i {
 
 .fonctionnement {
   background-color: #FFF;
+  padding: 20px 20px;
+}
+.list__item {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: #F6F6F6;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.list__item i {
+  margin-right: 20px;
+}
+
+.chip {
+  background-color: #9356DC;
+  color: #FFF;
+  font-size: 0.75rem;
+  width: 15px;
+  height: 15px;
   display: flex;
-  flex-direction: column;
-  padding: 50px 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  border-radius: 50%;
+  position: relative;
+  top: 15px;
+  left: -10px;
+}
+
+.list__item__content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px;
 }
 
 .restaurants {
@@ -81,6 +113,7 @@ footer i {
   font-weight: 500;
   border-style: none;
   border-radius: 30px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 .restaurants a {
@@ -140,8 +173,9 @@ footer i {
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .explorer h2 {
   font-size: 1.5rem;
@@ -152,6 +186,55 @@ footer i {
   font-size: 1.125rem;
   font-weight: lighter;
   padding: 0 20px;
+}
+
+.logo {
+  font-family: "Shrikhand", serif;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #F6F6F6;
+  margin: 0;
+}
+
+.logo {
+  font-family: "Shrikhand", serif;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo i {
+  color: black;
+  position: relative;
+  left: -50px;
+}
+
+.hero__img {
+  height: 200px;
+  width: 100%;
+  position: absolute;
+}
+.hero__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.restaurant__menu {
+  padding: 10px;
+  border-radius: 30px 30px 0px 0px;
+  background-color: #F6F6F6;
+  position: relative;
+  top: 150px;
+}
+.restaurant__menu h2 {
+  font-family: "Shrikhand", serif;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,11 +3,8 @@
   margin-top: 0;
   padding-top: 20px;
   padding-bottom: 20px;
-  
-  display: flex;
-  flex-direction: column;
+  @include centered-content;
   text-align: center;
-  align-items: center;
 
   h2 {
     font-size: 1.5rem;
