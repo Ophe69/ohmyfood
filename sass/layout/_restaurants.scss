@@ -2,5 +2,48 @@
   background-color: $very-light-grey;
   display: flex;
   flex-direction: column;
-  padding: 20px 20px;
+  padding: 20px 20px 10px 20px;
+
+}
+.menu__cards {
+  @include centered-content;
+  margin-bottom: 0px;
+
+}
+
+@media (min-width: 768px){
+  .restaurants {
+    padding: 10px 50px;
+    margin-bottom: 0px;
+    h2{
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+  }
+
+  .menus__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .restaurants {
+    padding: 20px 180px;
+    h2{
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+  }
+
+  .menus__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }

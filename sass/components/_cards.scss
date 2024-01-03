@@ -1,14 +1,11 @@
 .restaurants a {
   text-decoration: none;
 }
-
-.menu__cards {
-  @include centered-content;
-
-}
 .card__href {
   height: 150px;
   width: 90%;
+  margin-bottom: 20px;
+  
 }
   
 .card {
@@ -18,41 +15,36 @@
   border-radius: 20px;
   margin-bottom: 20px;
 
-  img{
+  .card__image{
     width: 100%;
     height: 160px;
+    position: relative;
+    display: flex;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: 50% 60%; /* 1st value left or right and the second moves it up or down.*/
     border-radius: 20px 20px 0 0;
   }
-  .new-1{
+
+  .new{
     height: 15px;
     width: 70px;
     background-color: $tertiary;
     color: green;
+    position: absolute;
+    top: 10px;
+    right: 15px;
     font-size: 0.80rem;
     padding: 5px;
+    z-index: 100;
     @include centered-content;
-/*     position: relative;
-    bottom: 155px; left: 220px;  */
-    position: absolute;
-    top: 830px; left: 250px;
-    
-
-  }
-  .new-2{
-    height: 15px;
-    width: 70px;
-    background-color: $tertiary;
-    color: green;
-    font-size: 0.80rem;
-    padding: 5px;
-    @include centered-content;
-    position: absolute;
-    top: 1085px; left: 250px;
-
   }
 }
+
 
 .card__content{
   padding: 5px 20px 5px 10px;
@@ -68,10 +60,74 @@
   }
   p {
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     font-size: 1rem;
     font-weight: lighter;
   }
 }
 
+@media (min-width: 768px) {
+  .card__href {
+    height: auto;
+    width: 45%;
+    margin-bottom: 10px;
+  }
+    
+  .card {
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  
+    img{
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      object-position: 50% 60%; /* 1st value left or right and the second moves it up or down.*/
+      border-radius: 20px 20px 0 0;
+    }
+
+  }
+  .card__content {
+    font-size: 18px;
+    h3 {
+      font-weight: 700;
+    }
+    p{
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .card__href {
+    height: auto;
+    width: 45%;
+    margin-bottom: 20px;
+  }
+    
+  .card {
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    border-radius: 20px;
+    margin-bottom: 0px;
+  
+    img{
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      object-position: 50% 60%; /* 1st value left or right and the second moves it up or down.*/
+      border-radius: 20px 20px 0 0;
+    }
+
+  }
+  .card__content {
+    font-size: 18px;
+    h3 {
+      font-weight: 700;
+    }
+  }
+}
 

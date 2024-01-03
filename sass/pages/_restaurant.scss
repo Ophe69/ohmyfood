@@ -10,11 +10,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   i {
+    color: black;
+    position: absolute;
+    left: 20px;
+    top: 20px
+  }
+/*   i {
     color: black;
     position: relative;
     left: -50px;
-  }
+  } */
 }
 
 .hero__img {
@@ -44,7 +51,6 @@ body {
   align-items: center;
   padding-right: 20px;
   h2{
-    
     font-family: 'Shrikhand', serif;
     font-size: 1.50rem;
     font-weight: 400;
@@ -109,4 +115,124 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+
+@media (min-width: 768px) {
+  .body__restaurant {
+    background-color: $white;
+  }
+  .main__restaurant{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    i {
+      color: black;
+      position: absolute;
+      margin-top: 20px;
+    }
+  }
+
+  .hero__img{
+    height: 400px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 60%;
+    }
+  }
+  .restaurant__menu {
+    width: 60%;
+    margin-bottom: -50px;
+  }
+
+  .restaurant__title {
+    justify-content: center;
+
+    h2{
+      margin-right: 20px;
+    }
+    i {
+      font-size: 1.25rem;
+    }
+  }
+
+  .restaurant__menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .restaurant__cards {
+    width: 60%;
+  }
+
+  .btn-container{
+    margin: 30px 20px 20px 20px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .body__restaurant {
+    background-color: $white;
+  }
+  .main__restaurant{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    i {
+      color: black;
+      position: absolute;
+      margin-top: 20px;
+    }
+  }
+
+  .hero__img{
+    height: 400px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 60%;
+    }
+  }
+  .restaurant__menu {
+    width: 60%;
+    margin-bottom: -50px;
+  }
+
+  .restaurant__title {
+    justify-content: center;
+
+    h2{
+      margin-right: 20px;
+    }
+    i {
+      font-size: 1.25rem;
+    }
+  }
+
+  .restaurant__menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .restaurant__cards {
+    width: 60%;
+  }
+
+  .btn-container{
+    margin: 30px 20px 20px 20px;
+  }
+
 }
