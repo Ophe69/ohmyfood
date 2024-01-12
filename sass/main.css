@@ -12,25 +12,6 @@ les extensions fichiers et les underscores initiaux doivent être omis. */
  */
 /* faire une mixin pour les menus des restaurants
 avec en argument le titre mais les règles css pour des cards contenant chacune 3 div */
-.loader {
-  width: 6rem;
-  height: 6rem;
-  border: 10px solid #9356DC;
-  border-bottom-color: transparent;
-  border-radius: 50%;
-  display: inline-block;
-  box-sizing: border-box;
-  animation: rotation 1s linear infinite;
-}
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 /* faire une mixin pour les menus des restaurants
 avec en argument le titre mais les règles css pour des cards contenant chacune 3 div */
 body {
@@ -304,10 +285,6 @@ footer .footer__links i {
   border-radius: 30px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-.btn:hover {
-  filter: opacity(80%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.4);
-}
 
 .restaurants a {
   text-decoration: none;
@@ -547,9 +524,6 @@ body {
   font-size: 1.5rem;
   font-weight: 400;
 }
-.restaurant__title i:active {
-  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-}
 
 .restaurant__cards h3 {
   margin-top: 30px;
@@ -682,7 +656,7 @@ body {
     object-position: 50% 60%;
   }
   .restaurant__menu {
-    width: 70%;
+    width: 60%;
     margin-bottom: -50px;
   }
   .restaurant__title {
