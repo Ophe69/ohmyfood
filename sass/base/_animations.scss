@@ -1,0 +1,56 @@
+#homepage > .loader {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  height: 100%;
+  inset: 0;
+  z-index: 3;
+  opacity: 0.9;
+  animation: disappear 200ms 3s forwards;
+  transform-origin: top;
+}
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #9356dc;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out;
+  animation-iteration-count: 3;
+}
+
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+} 
+
+@keyframes load {
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}
+}
+
+.starters {
+opacity: 0;
+animation: load 1s forwards 1s;
+}
+.main-course{
+opacity: 0;
+animation: load 1s forwards 2s;
+}
+.deserts{
+opacity: 0;
+animation: load 1s forwards 3s;
+}
