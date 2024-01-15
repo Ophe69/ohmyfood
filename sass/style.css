@@ -649,11 +649,13 @@ body {
 
 .restaurant__card__content {
   margin-bottom: 10px;
-  padding: 10px 5px 5px 10px;
+  padding-left: 10px;
   background-color: #FFF;
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .restaurant__card__content h4 {
   margin: 0px;
@@ -661,21 +663,46 @@ body {
 }
 
 .card__subcontent {
-  margin: 5px 20px 5px 0px;
+  margin: 10px 10px 5px 0px;
   font-size: 0.8rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+}
+.card__subcontent h4,
+.card__subcontent p {
+  display: inline-block;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card__description {
-  margin: 0px;
+  margin: 5px 0px 0px 0px;
   font-weight: 300;
 }
 
 .card__price {
-  margin: 0px;
   font-weight: 400;
+  font-size: 0.8rem;
+  margin: 5px 10px 10px 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.menu__check {
+  background-color: #99E2D0;
+  color: white;
+  font-size: 1.25rem;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 0px 15px 15px 0px;
+  position: relative;
+  /*   display: none; */
+  text-align: center;
+  height: 60px;
+  width: 20%;
+}
+.menu__check i {
+  padding: 20px;
 }
 
 .btn-container {
@@ -725,7 +752,10 @@ body {
     align-items: center;
   }
   .restaurant__cards {
-    width: 60%;
+    width: 70%;
+  }
+  .menu__check {
+    width: 150px;
   }
   .btn-container {
     margin: 30px 20px 20px 20px;
