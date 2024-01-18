@@ -70,6 +70,35 @@ avec en argument le titre mais les règles css pour des cards contenant chacune 
   animation: load 1s forwards 3s;
 }
 
+/* .restaurant__card__content:hover ~ .menu__check{
+  animation: checked 1s ease-in-out
+}
+
+@keyframes checked {
+
+  to{
+
+    display: block;
+    transform: translateX(20px);
+
+  }
+} */
+@keyframes checked {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 18%;
+  }
+}
+.restaurant__card__content:hover .menu__check {
+  display: block;
+  position: relative;
+  animation: checked 0.5s ease-in-out 0s forwards;
+}
+
 /* faire une mixin pour les menus des restaurants
 avec en argument le titre mais les règles css pour des cards contenant chacune 3 div */
 body {
@@ -542,11 +571,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  /*   i {
-      color: black;
-      position: relative;
-      left: -50px;
-    } */
 }
 .logo i {
   color: black;
@@ -579,7 +603,6 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /*   padding-right: 20px; */
 }
 .restaurant__title h2 {
   font-family: "Shrikhand", serif;
@@ -656,6 +679,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  transition: display 2s;
 }
 .restaurant__card__content h4 {
   margin: 0px;
@@ -683,7 +707,7 @@ body {
 .card__price {
   font-weight: 400;
   font-size: 0.8rem;
-  margin: 5px 10px 10px 10px;
+  margin: 5px 15px 10px 10px;
   display: flex;
   align-items: flex-end;
 }
@@ -696,13 +720,30 @@ body {
   padding: 0px;
   border-radius: 0px 15px 15px 0px;
   position: relative;
-  /*   display: none; */
+  display: none;
   text-align: center;
-  height: 60px;
+  height: 100%;
   width: 20%;
+  /*  transition: all 4s ease-in-out */
 }
 .menu__check i {
   padding: 20px;
+}
+
+@keyframes checked {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 18%;
+  }
+}
+.restaurant__card__content:hover .menu__check {
+  display: block;
+  position: relative;
+  animation: checked 0.5s ease-in-out 0s forwards;
 }
 
 .btn-container {
@@ -773,7 +814,7 @@ body {
   .logo i {
     color: black;
     position: absolute;
-    margin-top: 20px;
+    margin-top: 5px;
   }
   .hero__img {
     height: 600px;
@@ -789,7 +830,11 @@ body {
     margin-bottom: -50px;
   }
   .restaurant__title h2 {
+    font-size: 2rem;
     margin-right: 20px;
+  }
+  .restaurant__title i {
+    font-size: 1.75rem;
   }
   .restaurant__menu {
     display: flex;
@@ -799,6 +844,18 @@ body {
   }
   .restaurant__cards {
     width: 60%;
+  }
+  .restaurant__card__content h4,
+  .restaurant__card__content p {
+    display: inline-block;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card__subcontent {
+    display: flex;
+    flex-direction: column;
   }
   .btn-container {
     margin: 30px 20px 20px 20px;

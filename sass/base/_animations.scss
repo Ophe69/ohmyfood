@@ -54,3 +54,34 @@ animation: load 1s forwards 2s;
 opacity: 0;
 animation: load 1s forwards 3s;
 }
+
+/* .restaurant__card__content:hover ~ .menu__check{
+  animation: checked 1s ease-in-out
+}
+
+@keyframes checked {
+  
+  to{
+    
+    display: block;
+    transform: translateX(20px);
+    
+  }
+} */
+@keyframes checked {
+  0% {
+       opacity: 0;
+       width: 0%;
+  }
+
+  100% {
+       opacity: 1;
+       width: 18%;
+  }
+}
+
+.restaurant__card__content:hover .menu__check{
+  display: block;
+  position: relative;
+  animation: checked 0.5s ease-in-out 0s forwards;
+ }
