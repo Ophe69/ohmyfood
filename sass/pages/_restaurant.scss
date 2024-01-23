@@ -60,7 +60,6 @@ body {
 .icons {
   position: relative;
   display: flex;
-  justify-content: baseline;
   align-items: center;
 /*   margin: 0 2.3rem 0 0; */
   width: 1.25rem;
@@ -117,8 +116,6 @@ body {
   }
 }
 
-
-
 .restaurant__card__content {
   margin-bottom: 10px;
   padding-left: 10px;
@@ -129,24 +126,27 @@ body {
   flex-direction: row;
   justify-content: space-between;
   transition: display 2s;
-  h4{
-    margin: 0px;
-    font-size: 0.9rem;
-  }
 
 }
 
 
 .card__subcontent {
   margin: 10px 10px 5px 0px;
+  width: 100%;
   font-size: 0.80rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap;
+  h4{
+    margin: 0px;
+    font-size: 0.9rem;
+  }
   h4,
   p {
-    display: inline-block;
-    width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding-right: 10px;
+
+    
   }
 
 }
@@ -154,14 +154,13 @@ body {
   margin: 5px 0px 0px 0px;
   font-weight: 300;
   
-  
-
 }
 .card__price {
   font-weight: 400;
   font-size: 0.80rem;
-  margin: 5px 15px 10px 10px;
+  margin: 5px 15px 10px 5px;
   display: flex;
+  justify-content: baseline;
   align-items: flex-end;
 
 }
@@ -276,6 +275,7 @@ body {
 
   .body__restaurant {
     background-color: $white;
+    height: 100vh;
   }
   .main__restaurant{
     display: flex;
@@ -300,10 +300,7 @@ body {
       object-position: 50% 60%;
     }
   }
-  .restaurant__menu {
-    width: 70%;
-    margin-bottom: -50px;
-  }
+
 
   .restaurant__title {
     h2{
@@ -316,13 +313,15 @@ body {
   }
 
   .restaurant__menu{
+    width: 50%;
+    margin-bottom: -50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   .restaurant__cards {
-    width: 60%;
+    width: 70%;
   }
 
   .restaurant__card__content{
