@@ -133,18 +133,20 @@ body {
 .card__subcontent {
   margin: 10px 10px 5px 0px;
   width: 100%;
-  font-size: 0.80rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 0.90rem;
   display: inline-block;
+  overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
   h4{
     margin: 0px;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   h4,
   p {
     padding-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     
   }
@@ -157,10 +159,9 @@ body {
 }
 .card__price {
   font-weight: 400;
-  font-size: 0.80rem;
+  font-size: 1rem;
   margin: 5px 15px 10px 5px;
   display: flex;
-  justify-content: baseline;
   align-items: flex-end;
 
 }
@@ -182,23 +183,6 @@ body {
     padding: 20px
   }
 }
-@keyframes checked {
-  0% {
-       opacity: 0;
-       width: 0%;
-  }
-
-  100% {
-       opacity: 1;
-       width: 18%;
-  }
-}
-
-.restaurant__card__content:hover .menu__check{
-  display: block;
-  position: relative;
-  animation: checked 0.5s ease-in-out 0s forwards;
- }
 
 
 
@@ -261,8 +245,8 @@ body {
     width: 70%;
   }
 
-  .menu__check{
-    width: 150px;
+  .menu__check {
+    width: 20%
   }
 
   .btn-container{
@@ -329,15 +313,19 @@ body {
     p {
       display: inline-block;
       width: 300px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
   }
 
   .card__subcontent{
     display: flex;
     flex-direction: column;
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .menu__check {
+    width: 20%
   }
 
 
