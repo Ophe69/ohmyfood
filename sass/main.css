@@ -10,8 +10,7 @@ les extensions fichiers et les underscores initiaux doivent être omis. */
 @import 'vendors/*';
 @import 'base/*';
  */
-/* faire une mixin pour les menus des restaurants
-avec en argument le titre mais les règles css pour des cards contenant chacune 3 div */
+
 .loader {
   width: 6rem;
   height: 6rem;
@@ -31,8 +30,7 @@ avec en argument le titre mais les règles css pour des cards contenant chacune 
     transform: rotate(360deg);
   }
 }
-/* faire une mixin pour les menus des restaurants
-avec en argument le titre mais les règles css pour des cards contenant chacune 3 div */
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: #F6F6F6;

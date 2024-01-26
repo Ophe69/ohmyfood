@@ -10,33 +10,6 @@ les extensions fichiers et les underscores initiaux doivent être omis. */
 @import 'vendors/*';
 @import 'base/*';
  */
-/* faire une mixin pour les menus des restaurants
-avec en argument le titre mais les règles css pour des cards contenant chacune 3 div */
-#homepage > .loader {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  height: 100%;
-  inset: 0;
-  z-index: 3;
-  opacity: 0.9;
-  animation: disappear 200ms 3s forwards;
-  transform-origin: top;
-}
-
-.loader::after {
-  content: "";
-  height: 100px;
-  width: 100px;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #9356dc;
-  border-radius: 50%;
-  animation: spin 1s ease-in-out;
-  animation-iteration-count: 3;
-}
-
 @keyframes disappear {
   to {
     transform: scale(0);
@@ -55,21 +28,6 @@ avec en argument le titre mais les règles css pour des cards contenant chacune 
     opacity: 1;
   }
 }
-.starters {
-  opacity: 0;
-  animation: load 1s forwards 1s;
-}
-
-.main-course {
-  opacity: 0;
-  animation: load 1s forwards 2s;
-}
-
-.deserts {
-  opacity: 0;
-  animation: load 1s forwards 3s;
-}
-
 @keyframes checked {
   0% {
     opacity: 0;
@@ -80,14 +38,6 @@ avec en argument le titre mais les règles css pour des cards contenant chacune 
     width: 20%;
   }
 }
-.restaurant__card__content:hover .menu__check {
-  display: block;
-  position: relative;
-  animation: checked 0.5s ease-in-out 0s;
-}
-
-/* faire une mixin pour les menus des restaurants
-avec en argument le titre mais les règles css pour des cards contenant chacune 3 div */
 body {
   font-family: "Roboto", sans-serif;
   background-color: #F6F6F6;
@@ -189,7 +139,7 @@ footer .footer__links i {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 6px 0px inset; /* , rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
+  box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 6px 0px inset;
 }
 .location h2 {
   font-size: 1rem;
@@ -348,7 +298,6 @@ footer .footer__links i {
 .btn {
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   height: 50px;
-  /* width: 60%; */
   width: 218px;
   margin: 20px 20px 0px 20px;
   color: #FFF;
@@ -391,7 +340,7 @@ footer .footer__links i {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 60%; /* 1st value left or right and the second moves it up or down.*/
+  object-position: 50% 60%;
   border-radius: 20px 20px 0 0;
 }
 .card .new {
@@ -448,7 +397,7 @@ footer .footer__links i {
     width: 100%;
     height: 160px;
     object-fit: cover;
-    object-position: 50% 60%; /* 1st value left or right and the second moves it up or down.*/
+    object-position: 50% 60%;
     border-radius: 20px 20px 0 0;
   }
   .card__content {
@@ -478,7 +427,7 @@ footer .footer__links i {
     width: 100%;
     height: 160px;
     object-fit: cover;
-    object-position: 50% 60%; /* 1st value left or right and the second moves it up or down.*/
+    object-position: 50% 60%;
     border-radius: 20px 20px 0 0;
   }
   .card__content {
@@ -488,6 +437,31 @@ footer .footer__links i {
     font-weight: 700;
   }
 }
+#homepage > .loader {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  height: 100%;
+  inset: 0;
+  z-index: 3;
+  opacity: 0.9;
+  animation: disappear 200ms 3s forwards;
+  transform-origin: top;
+}
+
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #9356dc;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out;
+  animation-iteration-count: 3;
+}
+
 .explorer {
   background-color: #F6F6F6;
   margin-top: 0;
@@ -605,11 +579,9 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  /*   margin: 0 2.3rem 0 0; */
   width: 1.25rem;
   height: 2.6rem;
 }
-
 .icons i {
   position: absolute;
   display: block;
@@ -654,6 +626,21 @@ body {
   height: 1px;
   bottom: 0;
   border-bottom: 3px solid #99E2D0;
+}
+
+.starters {
+  opacity: 0;
+  animation: load 1s forwards 1s;
+}
+
+.main-course {
+  opacity: 0;
+  animation: load 1s forwards 2s;
+}
+
+.deserts {
+  opacity: 0;
+  animation: load 1s forwards 3s;
 }
 
 .restaurant__card__content {
@@ -713,10 +700,15 @@ body {
   text-align: center;
   height: 100%;
   width: 20%;
-  /*  transition: all 4s ease-in-out */
 }
 .menu__check i {
   padding: 20px;
+}
+
+.restaurant__card__content:hover .menu__check {
+  display: block;
+  position: relative;
+  animation: checked 0.5s ease-in-out 0s;
 }
 
 .btn-container {
@@ -783,6 +775,7 @@ body {
   .main__restaurant {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
   .logo i {
@@ -807,7 +800,7 @@ body {
     font-size: 1.75rem;
   }
   .restaurant__menu {
-    width: 50%;
+    width: 70%;
     margin-bottom: -50px;
     display: flex;
     flex-direction: column;
@@ -815,7 +808,7 @@ body {
     align-items: center;
   }
   .restaurant__cards {
-    width: 70%;
+    width: 60%;
   }
   .restaurant__card__content h4,
   .restaurant__card__content p {
